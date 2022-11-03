@@ -1,0 +1,76 @@
+// main: style1.less
+
+#skills {
+		.title {
+				display: flex;
+				justify-content: flex-start;
+				align-items: center;
+				margin-bottom: 10px;
+			}
+		
+			.title__pic {
+				width: 20%;
+				margin-right: 5%;
+				margin-left: 2%;
+			}
+    ul {
+        position: relative;
+				padding-top: 10px;
+				padding-bottom: 10px;
+
+        li {
+            border-bottom: 4px solid @chartBaseColor;
+            padding-bottom: 3px;
+            margin-bottom: 1em;
+
+            &::after {
+                content: " ";
+                display: block;
+                height: 8px;
+                width: 75%;
+                position: relative;
+                top: 9px;
+                background-color: @chartHighlightColor;
+                border-bottom-left-radius: 4px;
+                border-top-left-radius: 4px;
+                
+                transform: translateX(0) scaleX(1);
+                transition: transform 0.5s;
+            }
+
+            &:hover::after {
+                transform: translateX(5%) scaleX(1.1);
+            }
+
+            &:nth-child(1)::after {
+                width: 75%;
+            }
+
+            &:nth-child(2)::after {
+                width: 30%;
+            }
+
+            &:nth-child(3)::after {
+                width: 75%;
+            }
+        }
+    }
+		#container {
+			visibility: hidden;
+		}
+/*				@media (max-width: @breakpointMobile) {
+					ul {
+						visibility: hidden;
+					}
+				#container {
+					visibility: visible;
+					margin-top: 130px;
+					background-color: @chartHighlightColor;
+					scale: 1.5;
+					height: 50%;
+					width: 100%;
+					margin-bottom: 200px;
+				}
+				}
+*/
+}
