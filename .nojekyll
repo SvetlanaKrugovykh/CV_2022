@@ -1,0 +1,2 @@
+# Prevent GitHub Pages from ignoring files/folders that start with an underscore
+# This ensures user styles or generated files prefixed with _ are served
